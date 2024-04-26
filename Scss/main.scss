@@ -1,1 +1,16 @@
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import 'custom';
+
+
+//Pour placer mon footer en bas de la page
+html{
+  position: relative;
+  min-height: 100%;
+}
+
+footer.footer{
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
