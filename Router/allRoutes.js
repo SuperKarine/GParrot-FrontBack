@@ -3,9 +3,9 @@ import Route from "./Route.js";
 //Définir ici vos routes
 export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html"),
-    new Route("/galerie", "La galerie", "/pages/galerie.html"),
-    new Route("/formulaire", "formulaire.html", "/pages/formulaire.html"),
-    new Route("/signin", "Connexion", "/pages/signin.html"),
+    new Route("/", "galerie",  "/pages/galerie.html"),
+    new Route("/", "formulaire", "/pages/formulaire.html"),
+    new Route("/", "signin", "Connexion", "/pages/signin.php", "/js/auth/signin.js"),
     
 ];
 
