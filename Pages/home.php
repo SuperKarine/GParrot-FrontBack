@@ -1,3 +1,27 @@
+
+
+
+<?php
+
+try{
+    $dsn = "mysql:host=localhost;dbname=parrotBack;charset=utf8";
+    $username = "root";
+    $password = "monNomPvot";
+    $options = [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES => false,
+    ];
+
+    $pdo = new PDO($dsn,$username,$password,$options);
+    echo "Connexion réussi !";
+
+} catch (PDOException $e) {
+    echo "Erreur de connexion : " . $e-> getMessage();
+
+}
+?><!-- fin Mode de connexion à ma bdd -->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

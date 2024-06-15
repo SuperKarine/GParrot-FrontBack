@@ -2,10 +2,12 @@ import Route from "./Route.js";
 
 //Définir ici vos routes
 export const allRoutes = [
-    new Route("/", "Accueil", "/pages/home.html"),
-    new Route("/", "galerie",  "/pages/galerie.html"),
-    new Route("/", "formulaire", "/pages/formulaire.html"),
-    new Route("/", "signin", "Connexion", "/pages/signin.php", "/js/auth/signin.js"),
+    new Route("/", "Accueil", "/Pages/home.php"),
+    new Route("/", "galerie",  "/Pages/galerie.php"),
+    new Route("/", "formulaire", "/Pages/formulaire.html"),
+    new Route("/", "Cars", "/Pages/Cars.php"),
+    new Route("/", "index.php", "/admin/index.php"),
+    new Route("/", "signin", "Connexion", "/Pages/signin.php", "/js/auth/signin.js"),
     
 ];
 

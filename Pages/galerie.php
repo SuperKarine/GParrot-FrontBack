@@ -2,16 +2,29 @@
 
 <?php
 
-//Connection à la base de données
 
-try{
-    $access= new pdo("mysql:host=localhost;dbname=parrotBack;charset=utf8", "root", "monNomPvot");
-    $access-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+try {
+    $dsn = "mysql:host=localhost;dbname=parrotBack;charset=utf8";
+    $username = "root";
+    $password = "monNomPvot";
+    $options = [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES => false,
+    ];
 
-} catch (Exception $e) {
-    echo $e-> getmessage();
+    $pdo = new PDO($dsn, $username, $password, $options);
+    echo "Connexion réussi !";
+
+} catch (PDOException $e) {
+    echo "Erreur de connexion : " . $e->getMessage();
 
 }
+<!-- fin Mode de connexion à ma bdd -->
+
+//Je vais créer une var pour afficher mes cars
+
+
 // Fonction pour ajouter une voiture
     function ajouter($model, $marque, $kilometres, $prix, $carburant, $image) {
     global $access;
@@ -25,7 +38,6 @@ try{
     }
 }
 
-// Je fais une fonction pour tout afficher
 
 function afficher() {
     global $access;
@@ -179,7 +191,12 @@ function supprimer($id_cars) {
     </div>
 </div>
 
+<script src=".js/script.js"></script>
+<script type="module" src="Router/router.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
 </body>
 
 </html>
-
