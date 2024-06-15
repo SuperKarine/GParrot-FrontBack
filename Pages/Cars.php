@@ -1,6 +1,9 @@
 
 <?php
 
+require("../Pages/galerie.php");
+$idcars=afficher();
+
 try{
     $dsn = "mysql:host=localhost;dbname=parrotBack;charset=utf8";
     $username = "root";
